@@ -25,12 +25,12 @@
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
-    <div id="myModal" class="modal">
+    <div id="formModal" class="modal">
         <div class="modalContent">
           <!-- Pop up box with a form that you put the new card info into. -->
           <div class="modalHeader">Add Task</div>
           <div class="modalBody">
-            <form class="formInput">
+            <form id="addTaskForm" class="formInput">
               <label for="title" class="titleHere">Task Title:</label>
               <input type="text" class="titleText">
 
@@ -42,14 +42,14 @@
             </form>
           </div>
             <div class="modalFooter">
-            <input type="submit" value="Add Task" class="createButton">
+            <button type="submit" value="Create" class="createButton"></button>
           </div>
         </div>
     </div>
               <!-- To Do cards html -->
     <div id="cardContainer" class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
-        <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
+        <div id="to-do" class="card border-light mb-3 lane flex-grow-1 draggable">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">To Do</h2>
           </div>
@@ -60,7 +60,7 @@
       </div>
       <!-- In progress cards html -->
       <div class="col-12 col-lg-4 d-flex">
-        <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
+        <div id="in-progress" class="card border-light mb-3 lane flex-grow-1 draggable">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
@@ -71,7 +71,7 @@
         </div>
         <!-- Done cards html -->
         <div class="col-12 col-lg-4 d-flex">
-          <div id="done" class="card border-light mb-3 lane flex-grow-1">
+          <div id="done" class="card border-light mb-3 lane flex-grow-1 draggable">
             <div class="card-header bg-white">
               <h2 class="card-title mb-1">Done</h2>
             </div>
@@ -83,13 +83,15 @@
     </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+    <!-- <script> $( "#draggable" ).draggable();</script> -->
 
   <script src="./assets//script.js"></script>
 </body>

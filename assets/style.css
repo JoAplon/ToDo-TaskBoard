@@ -14,3 +14,11 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+
+.modalContent{
+  background-color: white;
+  color: darkgreen;
+  font-weight: bold;
+  z-index: 100;
+  border-style: black 5px dotted;
+}
